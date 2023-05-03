@@ -14,7 +14,7 @@ const Header = () => {
                 <NavLink to='/blog'>Blog</NavLink>
             </ul>
             <div className='profile'>
-                <h4>Profile</h4>
+                <Link>Profile</Link>
                 <Link to='/login'>
                     <button className='login-btn'>Login</button>
                 </Link>

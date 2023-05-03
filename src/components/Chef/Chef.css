@@ -1,0 +1,43 @@
+.chefs-img img{
+    border-radius: 10px;
+}
+.chefs-name{
+    font-size: 22px;
+    font-weight: 700;
+    color: #181818;
+    margin-bottom: 7px;
+}
+.chefs-experience{
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.recipes-like{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.view-recipes-btn{
+    margin-top: 5rem;
+    text-align: center;
+}
+.recipes-btn{
+    display: inline-block;
+    background-color: #f94848;
+    padding: 13px 30px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.row{
+    padding: 28px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+}
