@@ -30,7 +30,7 @@
     font-size: 17px;
     text-decoration: none;
 }
-.address span{
+.address .map, .address .envelope, .address .phone{
     margin-bottom: 0.8rem;
     font-size: 1.1rem;
     margin-right: 24px;

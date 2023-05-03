@@ -25,9 +25,9 @@ const Footer = () => {
             </div>
             <div className='contact-box address'>
                 <h3>Contact</h3>
-                <span> < FaMapMarkerAlt /> </span>
-                <span> < FaEnvelope /> </span>
-                <span> < FaPhoneAlt /> </span>
+                <span className='map'> < FaMapMarkerAlt /> </span>
+                <span className='envelope'> < FaEnvelope /> </span>
+                <span className='phone'> < FaPhoneAlt /> </span>
             </div>
         </div>
     );

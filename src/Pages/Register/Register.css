@@ -1,0 +1,24 @@
+.register-title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+.field .name, .field .photo, .field .btn-register{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    outline: none;
+}
+.name, .photo{
+    padding-left: 10px;
+}
+.btn-register{
+    background-color: #f94848;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,10 +1,50 @@
 import React from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
     return (
-        <div>
-            
+        <div className='container forms'>
+            <div className="form login">
+                <div className="form-content">
+                    <h2 className='login-title'>Login</h2>
+                    <form>
+                        <div className='field input-field'>
+                            <input type="email" name="email" placeholder='Your email' className='email' required />
+                        </div>
+                        <div className='field input-field'>
+                            <input type="password" name="password" placeholder='Your password' className='password' required />
+                        </div>
+                        <div className='form-link'>
+                            <Link to="" className="forgot-password">Forgot password?</Link>
+                        </div>
+
+                        <div className='field button-field'>
+                            <input type="submit" value='Login' className='btn-login' />
+                        </div>
+
+                        <div className='form-link'>
+                            <span>Don't have an account? <Link to="/register" className="dont-acc">Register</Link></span>
+                        </div>
+                    </form>
+                </div>
+                <div className="line"></div>
+                <div className="media-option">
+                    <Link>
+                        <p className='field google'>
+                            <span> < FaGoogle /> </span>
+                            <span style={{marginLeft: '5px'}}>Login with Google</span>
+                        </p>
+                    </Link>
+                    <Link>
+                        <p className='field github'>
+                            <span> < FaGithub /> </span>
+                            <span style={{marginLeft: '5px'}}>Login with Github</span>
+                        </p>
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };
