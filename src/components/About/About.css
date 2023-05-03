@@ -1,0 +1,44 @@
+.about-text .about-btn{
+    display: inline-block;
+    background-color: #f94848;
+    padding: 13px 30px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.about{
+    background: url(../../assets/images/feature.svg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 3rem;
+}
+.about-img img{
+    width: 100%;
+    padding-top: 80px;
+    height: auto;
+}
+.about-text .about-title{
+    margin: 15px 0px 15px;
+    color: #181818;
+    line-height: 1.1;
+}
+.about-text .about-sub-title{
+    color: #f94848;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
+.about-text .about-desc{
+    font-size: 15px;
+    color: #757575;
+    line-height: 27px;
+    margin-bottom: 30px;
+}

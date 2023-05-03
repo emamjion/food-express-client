@@ -1,0 +1,48 @@
+section{
+    padding: 25px 18%;
+}
+
+/* Banner section style */
+
+.banner-section{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.banner-text .banner-title{
+    margin: 20px 0px 20px; 
+    font-size: 4.2rem;
+    line-height: 1.1;
+    color: #181818;
+}
+.banner-text .banner-sub-title{
+    font-size: 35px;
+    font-weight: 600;
+    color: #f94848;
+    margin: 0;
+}
+.banner-text .banner-desc{
+    font-size: 15px;
+    color: #757575;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+.banner-text .about-btn{
+    display: inline-block;
+    background-color: #f94848;
+    padding: 13px 30px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.banner-img img{
+    width: 100%;
+    height: auto;
+}
+/* Banner section style */

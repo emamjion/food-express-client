@@ -1,0 +1,51 @@
+/* google fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #fafafa;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 18%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 1px #13084982;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+}
+.logo-side{
+    display: flex;
+    align-items: center;
+}
+.ul-list a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: #181818;
+    font-weight: 600;
+}
+.ul-list a.active{
+    color: #f94848;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.login-btn{
+    display: inline-block;
+    background-color: #f94848;
+    padding: 13px 40px;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 17px;
+}
