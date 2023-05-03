@@ -3,6 +3,7 @@ import './Home.css';
 import bannerImg from '../../assets/images/hero.png'
 import About from '../About/About';
 import FoodMenu from '../FoodMenu/FoodMenu';
+import ChefSection from '../ChefSection/ChefSection';
 
 const Home = () => {
     return (
@@ -30,6 +31,11 @@ const Home = () => {
             {/* Food Menu section*/}
             <section>
                 <FoodMenu/>
+            </section>
+
+            {/* Chef Section */}
+            <section>
+                <ChefSection/>
             </section>
 
         </div>

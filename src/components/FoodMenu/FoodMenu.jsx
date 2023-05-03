@@ -84,7 +84,7 @@ const FoodMenu = () => {
                 </div>
             </div>
             <div className='box-btn'>
-                <a className='food-menu-btn' href="">About Us</a>
+                <a className='food-menu-btn' href="">See All Food</a>
             </div>
         </div>
     );

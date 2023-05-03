@@ -1,64 +1,54 @@
 .text-center{
     text-align: center;
 }
-.text-center .food-menu-title{
+.text-center .chefs-title{
     margin: 15px 0px 0px;
     font-size: 3.2rem;
     line-height: 1.1;
 }
-.text-center .food-menu-sub-title{
+.text-center .chefs-sub-title{
     color: #f94848;
     font-size: 35px;
     font-weight: 600;
     margin: 0;
 }
-.menu-content{
+.chefs-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-gap: 2rem;
     align-items: center;
-    margin-top: 4.5rem;
+    margin-top: 6rem;
     cursor: pointer;
+    text-align: center;
 }
-.box{
-    padding: 15px 50px 15px 50px;
-    background: #fff;
+.row{
+    padding: 28px 30px;
+    background-color: #fff;
     border-radius: 20px;
 }
-.box-content{
+.chefs-name{
+    font-size: 22px;
+    font-weight: 700;
+    color: #181818;
+    margin-bottom: 7px;
+}
+.chefs-experience{
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.recipes-like{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    padding: 0 20px;
 }
-.box-img img{
-    width: 100%;
-    height: auto;
-}
-.box-title{
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #181818;
-}
-.box-desc{
-    font-size: 15px;
-    color: #757575;
-    margin-bottom: 15px;
-}
-.box-price{
-    color: #f94848;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
-}
-.box-btn{
+.view-recipes-btn{
     margin-top: 5rem;
     text-align: center;
 }
-
-.food-menu-btn{
+.recipes-btn{
     display: inline-block;
     background-color: #f94848;
     padding: 13px 30px;
