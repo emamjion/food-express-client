@@ -25,7 +25,7 @@ const Header = () => {
             <div className='profile'>
                 {
                     user ? <>
-                        <span>{user.email}</span>
+                        <span title={user?.displayName} className='photo-url'><img src={user?.photoURL} /></span>
                         <button onClick={handleLogout} className='login-btn'>Logout</button>
                     </> : <Link to="/login">
                     <button className='login-btn'>Login</button></Link>

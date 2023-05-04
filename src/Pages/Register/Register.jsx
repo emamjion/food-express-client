@@ -3,15 +3,17 @@ import './Register.css';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserData} = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, email, password);
@@ -26,7 +28,9 @@ const Register = () => {
         createUser(email,password)
         .then(result => {
             const loggedUser = result.user;
+            console.log(loggedUser);
             setSuccess('User has been created successfully!');
+            updateUserData(result.user, name, photo);
             setError('');
             
             form.reset();
@@ -36,6 +40,7 @@ const Register = () => {
             setSuccess('');
         })
     }
+    
     
     
     return (

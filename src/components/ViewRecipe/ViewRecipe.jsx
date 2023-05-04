@@ -3,7 +3,8 @@ import './ViewRecipe.css';
 import { FaThumbsUp } from 'react-icons/fa';
 
 const ViewRecipe = ({viewDetails}) => {
-    const {chefPicture, description, chefName, likes, experienceYears, recipesNum, ingredients} = viewDetails;
+    const {chefPicture, description, chefName, likes, experienceYears, recipesNum} = viewDetails;
+    
     return (
         <div className='viewRecipe-section'>
             {/* view recipe section */}
@@ -29,6 +30,9 @@ const ViewRecipe = ({viewDetails}) => {
             </div>
 
             {/* recipe cardf */}
+            <div>
+                
+            </div>
         </div>
     );
 };
