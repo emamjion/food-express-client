@@ -27,10 +27,8 @@ const ViewRecipe = ({viewDetails}) => {
                     </div>
                 </div>
             </div>
-            {/* view recipe card */}
-            <div className='view-recipe-card'>
-                
-            </div>
+
+            {/* recipe cardf */}
         </div>
     );
 };

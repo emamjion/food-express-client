@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 
@@ -8,6 +8,10 @@ const Login = () => {
     const {signIn} = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
     
     const handleLogin = (event) => {
         event.preventDefault();
@@ -24,6 +28,7 @@ const Login = () => {
             setError('');
             
             form.reset();
+            navigate(from, {replace: true});
             
         })
         .catch(error => {
