@@ -4,6 +4,7 @@ import bannerImg from '../../assets/images/hero.png'
 import About from '../About/About';
 import FoodMenu from '../FoodMenu/FoodMenu';
 import ChefSection from '../ChefSection/ChefSection';
+import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Home = () => {
     return (
@@ -36,6 +37,11 @@ const Home = () => {
             {/* Chef Section */}
             <section>
                 <ChefSection/>
+            </section>
+
+            {/* news letter section */}
+            <section>
+                <NewsLetter/>
             </section>
 
         </div>

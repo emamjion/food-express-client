@@ -1,0 +1,32 @@
+.qAndA-section{
+    padding: 25px 18%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.qAndA{
+    height: 300px;
+    border: 2px solid #f94848;
+    padding: 20px;
+    background-color: #f6e6e6;
+    border-radius: 8px;
+}
+
+.btn-section{
+    padding: 25px 18%;
+    text-align: center;
+}
+.download-btn{
+    display: inline-block;
+    background-color: #f94848;
+    padding: 13px 30px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+}
