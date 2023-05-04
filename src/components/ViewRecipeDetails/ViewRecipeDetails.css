@@ -1,0 +1,35 @@
+.recipe-section{
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    grid-gap: 40px;
+}
+
+.recipe{
+    border: 3px solid;
+    padding: 40px;
+    height: 600px;
+    border-radius: 8px;
+}
+.recipe-img img{
+    width: 100%;
+}
+.fav-btn{
+    display: inline-block;
+    background-color: #f94848;
+    padding: 13px 30px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.favourite-btn-box{
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import './ViewRecipe.css';
 import { FaThumbsUp } from 'react-icons/fa';
+import ViewRecipeDetails from '../ViewRecipeDetails/ViewRecipeDetails';
 
 const ViewRecipe = ({viewDetails}) => {
-    const {chefPicture, description, chefName, likes, experienceYears, recipesNum} = viewDetails;
-    
+    const {chefPicture, description, chefName, likes, experienceYears, recipesNum,recipe} = viewDetails;
     return (
         <div className='viewRecipe-section'>
             {/* view recipe section */}
@@ -30,8 +30,14 @@ const ViewRecipe = ({viewDetails}) => {
             </div>
 
             {/* recipe cardf */}
-            <div>
-                
+            <div className='recipe-section'>
+                {
+                    recipe.map(rec => <ViewRecipeDetails
+                        rec={rec}
+                    >
+
+                    </ViewRecipeDetails>)
+                }
             </div>
         </div>
     );

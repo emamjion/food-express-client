@@ -16,6 +16,7 @@ import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import ViewRecipe from './components/ViewRecipe/ViewRecipe.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         element: <Register/>
       }
     ]
+  },
+  {
+    path : '*',
+    element: <ErrorPage/>
   }
 ])
 

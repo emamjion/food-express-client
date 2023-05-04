@@ -17,10 +17,10 @@ const NewsLetter = () => {
                     </p>
                 </div>
                 <div className="letter">
-                    <form className='letter-form'>
+                    <div className='letter-form'>
                         <input className='letter-input' type="email" name='email' placeholder='Your Email' />
                         <input className='visit-btn' type="submit" value="Visit" />
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
