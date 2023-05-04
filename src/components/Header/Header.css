@@ -36,6 +36,7 @@ body{
     display: flex;
     align-items: center;
     gap: 20px;
+    color: #181818;
 }
 .login-btn{
     display: inline-block;

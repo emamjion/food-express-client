@@ -1,15 +1,42 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
+    const {signIn} = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    
+    const handleLogin = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        signIn(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            setSuccess('User has been login successfully!');
+            setError('');
+            
+            form.reset();
+            
+        })
+        .catch(error => {
+            setError(error.message);
+            setSuccess('');
+        })
+    }
+    
     return (
         <div className='container forms'>
             <div className="form login">
                 <div className="form-content">
                     <h2 className='login-title'>Login</h2>
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <div className='field input-field'>
                             <input type="email" name="email" placeholder='Your email' className='email' required />
                         </div>
@@ -26,6 +53,10 @@ const Login = () => {
 
                         <div className='form-link'>
                             <span>Don't have an account? <Link to="/register" className="dont-acc">Register</Link></span>
+                        </div>
+                        <div className='success-error'>
+                            <p className='success-msg'>{success}</p>
+                            <p className='error-msg'>{error}</p>
                         </div>
                     </form>
                 </div>

@@ -1,15 +1,42 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Register.css';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const handleRegister = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, email, password);
+
+        createUser(email,password)
+        .then(result => {
+            const loggedUser = result.user;
+            setSuccess('User has been created successfully!');
+            setError('');
+            
+            form.reset();
+        })
+        .catch(error => {
+            setError(error.message);
+            setSuccess('');
+        })
+    }
+    
+    
     return (
         <div className='container forms'>
             <div className="form register">
                 <div className="form-content">
                     <h2 className='register-title'>Register</h2>
-                    <form>
+                    <form onSubmit={handleRegister}>
                         <div className='field input-field'>
                             <input type="text" name="name" placeholder='Your name' className='name' required />
                         </div>
@@ -32,6 +59,10 @@ const Register = () => {
 
                         <div className='form-link'>
                             <span>Already have an account? <Link to="/login" className="already-acc">Login</Link></span>
+                        </div>
+                        <div className='success-error'>
+                            <p className='success-msg'>{success}</p>
+                            <p className='error-msg'>{error}</p>
                         </div>
                     </form>
                 </div>

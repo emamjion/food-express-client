@@ -22,3 +22,15 @@
     font-weight: 600;
     cursor: pointer;
 }
+.success-error{
+    margin-top: 20px;
+    text-align: center;
+}
+.success-msg{
+    color: #09a846;
+    font-weight: 600;
+}
+.error-msg{
+    color: #f94848;
+    font-weight: 600;
+}
