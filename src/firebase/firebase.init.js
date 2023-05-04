@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('environment variable ', import.meta.env.VITE_apiKey);
 const firebaseConfig = {
-  apiKey: "AIzaSyAnjfg2eWz4Ube1l0eaiY_8BaDuaISYr1I",
-  authDomain: "food-express-client.firebaseapp.com",
-  projectId: "food-express-client",
-  storageBucket: "food-express-client.appspot.com",
-  messagingSenderId: "320348533123",
-  appId: "1:320348533123:web:b17da8caa0e678788c86b6"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
