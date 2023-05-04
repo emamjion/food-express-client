@@ -1,0 +1,41 @@
+.viewRecipe-section{
+    background: url(../../assets/images/feature.svg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 3rem;
+    padding: 10px 60px 40px;
+}
+.viewRecipe-img img{
+    width: 100%;
+    padding-top: 80px;
+    height: auto;
+    border-radius: 12px;
+}
+.viewRecipe-text .viewRecipe-title{
+    margin: 15px 0px 15px;
+    color: #181818;
+    line-height: 1.1;
+    text-align: center;
+}
+.viewRecipe-text .viewRecipe-desc{
+    font-size: 15px;
+    color: #757575;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+.viewRecipe-text .viewRecipe-experience{
+    text-align: center;
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.viewRecipe-text .like-recipe-num{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
