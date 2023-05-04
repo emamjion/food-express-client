@@ -5,8 +5,13 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Header = () => {
-    const {user} = useContext(AuthContext);
+    const {user , logOut} = useContext(AuthContext);
     
+    const handleLogout = () => {
+        logOut()
+        .then(() => {})
+        .catch(error => console.error(error))
+    }
     return (
         <nav className='navbar'>
             <div className='logo-side'>
@@ -18,10 +23,14 @@ const Header = () => {
                 <NavLink to='/blog'>Blog</NavLink>
             </ul>
             <div className='profile'>
-                {user && <span>{user.diplayName}</span>}
-                <Link to="/login">
-                    <button className='login-btn'>Login</button>
-                </Link>
+                {
+                    user ? <>
+                        <span>{user.email}</span>
+                        <button onClick={handleLogout} className='login-btn'>Logout</button>
+                    </> : <Link to="/login">
+                    <button className='login-btn'>Login</button></Link>
+                }
+                
             </div>
         </nav>
     );

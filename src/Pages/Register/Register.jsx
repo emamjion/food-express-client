@@ -16,6 +16,13 @@ const Register = () => {
         const password = form.password.value;
         console.log(name, email, password);
 
+        setError('');
+        setSuccess('');
+        if(password.length < 6){
+            setError('The password is less than 6 characters');
+            return;
+        }
+
         createUser(email,password)
         .then(result => {
             const loggedUser = result.user;
