@@ -83,13 +83,13 @@ const Register = () => {
                     <Link>
                         <p className='field google'>
                             <span> < FaGoogle /> </span>
-                            <span style={{marginLeft: '5px'}}>Login with Google</span>
+                            <span style={{marginLeft: '5px'}}>Register with Google</span>
                         </p>
                     </Link>
                     <Link>
                         <p className='field github'>
                             <span> < FaGithub /> </span>
-                            <span style={{marginLeft: '5px'}}>Login with Github</span>
+                            <span style={{marginLeft: '5px'}}>Register with Github</span>
                         </p>
                     </Link>
                 </div>

@@ -5,7 +5,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn, githubLogin, googleLogin} = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -35,6 +35,26 @@ const Login = () => {
             setError(error.message);
             setSuccess('');
         })
+    }
+
+    const handleGithubLogin = () => {
+        githubLogin()
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
+        .catch(error => {
+            console.error(error.message)
+        })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
+        .catch()
     }
     
     return (
@@ -71,13 +91,13 @@ const Login = () => {
                     <Link>
                         <p className='field google'>
                             <span> < FaGoogle /> </span>
-                            <span style={{marginLeft: '5px'}}>Login with Google</span>
+                            <span onClick={handleGoogleLogin} style={{marginLeft: '5px'}}>Login with Google</span>
                         </p>
                     </Link>
                     <Link>
                         <p className='field github'>
                             <span> < FaGithub /> </span>
-                            <span style={{marginLeft: '5px'}}>Login with Github</span>
+                            <span onClick={handleGithubLogin} style={{marginLeft: '5px'}}>Login with Github</span>
                         </p>
                     </Link>
                 </div>
