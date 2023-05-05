@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import './ViewRecipe.css';
 import { FaThumbsUp } from 'react-icons/fa';
 import ViewRecipeDetails from '../ViewRecipeDetails/ViewRecipeDetails';
@@ -10,7 +11,9 @@ const ViewRecipe = ({viewDetails}) => {
             {/* view recipe section */}
             <div className='view-recipe-banner'>
                 <div className='viewRecipe-img'>
-                    <img src={chefPicture} />
+                    <LazyLoad height={762} offset={300}>
+                        <img src={chefPicture} />
+                    </LazyLoad>
                 </div>
                 <div className='viewRecipe-text'>
                     <h2 className='viewRecipe-title'>{chefName}</h2>

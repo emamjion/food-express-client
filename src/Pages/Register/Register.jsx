@@ -78,21 +78,6 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
-                <div className="line"></div>
-                <div className="media-option">
-                    <Link>
-                        <p className='field google'>
-                            <span> < FaGoogle /> </span>
-                            <span style={{marginLeft: '5px'}}>Register with Google</span>
-                        </p>
-                    </Link>
-                    <Link>
-                        <p className='field github'>
-                            <span> < FaGithub /> </span>
-                            <span style={{marginLeft: '5px'}}>Register with Github</span>
-                        </p>
-                    </Link>
-                </div>
             </div>
         </div>
     );
