@@ -36,3 +36,16 @@
     margin-right: 24px;
     color: #757575;
 }
+
+@media (max-width: 600px){
+    .footer{
+        text-align: center;
+        font-size: 26px;
+    }
+    .social a{
+        margin: 0 auto;
+    }
+    .contact-box{
+        text-align: center;
+    }
+}
